@@ -7,7 +7,7 @@ import java.util.Random;
 
 public class Delantero extends Jugador{
        Random ram = new Random();
-    public Delantero(String nombre, int edad, String nacio, String pieHabil, int rating, String equipo, int Agarre, int Lanzamiento, int Fisico, int Ritmo, int Entrada, int Vision, int Passing, int Regate, int Disparo) {
+    public Delantero(String nombre, int edad, String nacio, String pieHabil, int rating, Equipo equipo, int Agarre, int Lanzamiento, int Fisico, int Ritmo, int Entrada, int Vision, int Passing, int Regate, int Disparo) {
         super(nombre, edad, nacio, pieHabil, rating, equipo, Agarre, Lanzamiento, Fisico, Ritmo, Entrada, Vision, Passing, Regate, Disparo);
     }
 
@@ -60,11 +60,11 @@ public class Delantero extends Jugador{
         this.rating = rating;
     }
 
-    public String getEquipo() {
+    public Equipo getEquipo() {
         return equipo;
     }
 
-    public void setEquipo(String equipo) {
+    public void setEquipo(Equipo equipo) {
         this.equipo = equipo;
     }
 

@@ -8,7 +8,7 @@ public abstract class Jugador {
     protected String nacio;
     protected String pieHabil;
     protected int rating;
-    protected String equipo;
+    protected Equipo equipo;
     
     protected int Agarre;
     protected int Lanzamiento;
@@ -20,7 +20,7 @@ public abstract class Jugador {
     protected int Regate;
     protected int Disparo;
 
-    public Jugador(String nombre, int edad, String nacio, String pieHabil, int rating, String equipo, int Agarre, int Lanzamiento, int Fisico, int Ritmo, int Entrada, int Vision, int Passing, int Regate, int Disparo) {
+    public Jugador(String nombre, int edad, String nacio, String pieHabil, int rating, Equipo equipo, int Agarre, int Lanzamiento, int Fisico, int Ritmo, int Entrada, int Vision, int Passing, int Regate, int Disparo) {
         this.nombre = nombre;
         this.edad = edad;
         this.nacio = nacio;
@@ -91,11 +91,11 @@ public abstract class Jugador {
         this.rating = rating;
     }
 
-    public String getEquipo() {
+    public Equipo getEquipo() {
         return equipo;
     }
 
-    public void setEquipo(String equipo) {
+    public void setEquipo(Equipo equipo) {
         this.equipo = equipo;
     }
 
