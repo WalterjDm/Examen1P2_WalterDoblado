@@ -364,18 +364,24 @@ public class Fifa30 extends javax.swing.JFrame {
                 
                 int edad = Integer.parseInt(jug_edad.getText());
                 int rating1 = Integer.parseInt(jug_rating.getText());
+                Portero p = new Portero(jug_nombre1.getText(), edad, jug_nacio.getText(), jug_piehabil.getText(),rating1 );
+                p.rating();
+                equipos.get(pos).getPlantilla().add(p);
                 
-                equipos.get(pos).getPlantilla().add(new Portero(jug_nombre1.getText(), edad, jug_nacio.getText(), jug_piehabil.getText(),rating1 ));
                 jug_nombre1.setText("");
                 jug_edad.setText("");
                 jug_nacio.setText("");
                 jug_piehabil.setText("");
                 jug_rating.setText("");
                 
+                
+                
             } else if (pos1 == 2) {
                 int edad = Integer.parseInt(jug_edad.getText());
                 int rating1 = Integer.parseInt(jug_rating.getText());
-                equipos.get(pos).getPlantilla().add(new Mediocampista(jug_nombre1.getText(), edad, jug_nacio.getText(), jug_piehabil.getText(),rating1));
+                Mediocampista m = new Mediocampista(jug_nombre1.getText(), edad, jug_nacio.getText(), jug_piehabil.getText(),rating1);
+                m.rating();
+                equipos.get(pos).getPlantilla().add(m);
                  jug_nombre1.setText("");
                 jug_edad.setText("");
                 jug_nacio.setText("");

@@ -13,7 +13,13 @@ public class Portero extends Jugador {
 
     public Portero(String nombre, int edad, String nacio, String pieHabil, int rating) {
         super(nombre, edad, nacio, pieHabil, rating);
+     
     }
+
+    public Portero() {
+    }
+    
+    
 
     public String getNombre() {
         return nombre;
@@ -146,13 +152,22 @@ public class Portero extends Jugador {
 
         int opc = 0;
         int s;
+         int opc1 = 0;
         ArrayList d = new ArrayList();
-        while (opc != 9) {
+        while (opc != 3) {
 
             d.add(s = 1 + ram.nextInt(12));
             opc++;
 
         }
+           ArrayList dd = new ArrayList();
+        while (opc1 != 6) {
+
+            dd.add(s = 1 + ram.nextInt(5));
+            opc++;
+
+        }
+        /////////////////////
         while (Agarre >= 70 && Agarre <= 100) {
 
             int Agarre1 = (Integer) d.get(1);
@@ -166,12 +181,76 @@ public class Portero extends Jugador {
         
         while (Lanzamiento >= 70 && Lanzamiento <= 100) {
 
-            int Lanzamiento1 = (Integer) d.get(1);
+            int Lanzamiento1 = (Integer) d.get(2);
 
             Lanzamiento = Lanzamiento1 * 12;
 
         }
         this.Lanzamiento = Lanzamiento;
+        
+        
+        while (Fisico >= 70 && Fisico <= 100) {
+
+            int Fisico1 = (Integer) dd.get(1);
+
+            Fisico = Fisico1 * 13;
+
+        }
+        this.Fisico = Fisico;
+        
+          while (Ritmo >= 70 && Ritmo <= 100) {
+
+            int Ritmo1 = (Integer) dd.get(2);
+
+            Ritmo = Ritmo1 * 13;
+
+        }
+          this.Ritmo = Ritmo;
+          while (Entrada >= 70 && Entrada <= 100) {
+
+            int Entrada1 = (Integer) dd.get(3);
+
+            Entrada = Entrada1 * 13;
+
+        } 
+          this.Entrada =Entrada;
+          
+               while (Vision >= 70 && Vision <= 100) {
+
+            int Vision1 = (Integer) dd.get(4);
+
+            Vision = Vision1 * 13;
+
+        } 
+          this.Vision =Vision;
+         while (Passing >= 70 && Passing <= 100) {
+
+            int Passing1 = (Integer) d.get(3);
+
+            Passing = Passing1 * 12;
+
+        }
+
+        this.Passing = Passing;
+        
+               while (Regate >= 70 && Regate <= 100) {
+
+            int Regate1 = (Integer) dd.get(5);
+
+            Regate = Regate1 * 13;
+
+        } 
+          this.Regate =Regate;
+          
+           while (Disparo >= 70 && Disparo <= 100) {
+
+            int Disparo1 = (Integer) dd.get(6);
+
+            Disparo = Disparo1 * 13;
+
+        } 
+          this.Disparo =Disparo;
+          
         
         
     }
