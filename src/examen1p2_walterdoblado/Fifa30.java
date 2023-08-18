@@ -43,8 +43,7 @@ public class Fifa30 extends javax.swing.JFrame {
         jug_nacio = new javax.swing.JTextField();
         jug_piehabil = new javax.swing.JTextField();
         jug_rating = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        table1 = new javax.swing.JTable();
+        jug_agregar = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
         equi_nombre = new javax.swing.JTextField();
         equi_pais = new javax.swing.JTextField();
@@ -135,31 +134,12 @@ public class Fifa30 extends javax.swing.JFrame {
 
         jug_rating.setText("Rating");
 
-        table1.setBackground(new java.awt.Color(51, 0, 51));
-        table1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "nombre", "pais"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
+        jug_agregar.setText("Agregar");
+        jug_agregar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jug_agregarMouseClicked(evt);
             }
         });
-        jScrollPane1.setViewportView(table1);
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -173,8 +153,8 @@ public class Fifa30 extends javax.swing.JFrame {
                     .addComponent(jug_nacio)
                     .addComponent(jug_edad)
                     .addComponent(jug_nombre1, javax.swing.GroupLayout.DEFAULT_SIZE, 324, Short.MAX_VALUE))
-                .addGap(22, 22, 22)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(262, 262, 262)
+                .addComponent(jug_agregar, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel7Layout.setVerticalGroup(
@@ -183,17 +163,20 @@ public class Fifa30 extends javax.swing.JFrame {
                 .addGap(25, 25, 25)
                 .addComponent(jug_nombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
+                .addComponent(jug_edad, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(43, 43, 43)
+                .addComponent(jug_nacio, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35)
+                .addComponent(jug_piehabil, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(jug_edad, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(43, 43, 43)
-                        .addComponent(jug_nacio, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(35, 35, 35)
-                        .addComponent(jug_piehabil, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(39, 39, 39)
-                        .addComponent(jug_rating, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(82, Short.MAX_VALUE))
+                        .addComponent(jug_rating, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(85, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jug_agregar, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(19, 19, 19))))
         );
 
         jTabbedPane1.addTab("Agregar jugador", jPanel7);
@@ -328,28 +311,19 @@ public class Fifa30 extends javax.swing.JFrame {
         
     }//GEN-LAST:event_equi_agregarMouseClicked
 
-    public void tabla(){
-        
-        
-        table1.setModel(new javax.swing.table.DefaultTableModel(
-                    new Object[][]{},
-                    new String[]{
-                       "nombre", "pais"
-                    }
-            ));
-        for (int i = 0; i < equipos.size(); i++) {
-            
-            Object[] row = {equipos.get(i).getNombreEqui(), equipos.get(i).getPais()};
-            DefaultTableModel modelo = (DefaultTableModel) table1.getModel();
-                modelo.addRow(row);
-                table1.setModel(modelo);  
-            
-        }
+    private void jug_agregarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jug_agregarMouseClicked
+       
+        JOptionPane.showMessageDialog(this, equipos);
         
         
         
         
-    }
+        
+        
+        
+    }//GEN-LAST:event_jug_agregarMouseClicked
+
+ 
     
     
     /**
@@ -403,13 +377,12 @@ public class Fifa30 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JButton jug_agregar;
     private javax.swing.JTextField jug_edad;
     private javax.swing.JTextField jug_nacio;
     private javax.swing.JTextField jug_nombre1;
     private javax.swing.JTextField jug_piehabil;
     private javax.swing.JTextField jug_rating;
-    private javax.swing.JTable table1;
     // End of variables declaration//GEN-END:variables
 }
