@@ -121,7 +121,7 @@ public class Fifa30 extends javax.swing.JFrame {
             .addGap(0, 458, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("tab3", jPanel5);
+        jTabbedPane1.addTab("Eliminar Equipo", jPanel5);
 
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -492,7 +492,25 @@ public class Fifa30 extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
-
+        
+        
+          if (!(equipos.isEmpty())) {
+        
+        int cap = Integer.parseInt(esta_capacidad.getText());
+        
+        Estadio es = new Estadio(esta_nombre.getText(), esta_pais.getText(),cap);
+        int pos = Integer.parseInt(JOptionPane.showInputDialog("ingrese el equipo del jugador" + equipos));
+        es.setEquipo(equipos.get(pos));
+        esta_nombre.setText("");
+        esta_pais.setText("");
+        esta_capacidad.setText("");
+        
+        
+          }else if (equipos.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "no hay equipos disponibles");
+        }
+        
+        
 
     }//GEN-LAST:event_jButton1MouseClicked
 
