@@ -139,6 +139,10 @@ public class Defensa extends Jugador{
         return "Defensa{" + '}';
     }
      public void rating(){
+         
+         
+         
+         
         
         
     }

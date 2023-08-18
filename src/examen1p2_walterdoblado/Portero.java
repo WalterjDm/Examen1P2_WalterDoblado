@@ -1,11 +1,11 @@
-
 package examen1p2_walterdoblado;
 
+import java.util.ArrayList;
 import java.util.Random;
 
+public class Portero extends Jugador {
 
-public class Portero extends Jugador{
-     Random ram = new Random();
+    Random ram = new Random();
 
     public Portero(String nombre, int edad, String nacio, String pieHabil, int rating, String equipo, int Agarre, int Lanzamiento, int Fisico, int Ritmo, int Entrada, int Vision, int Passing, int Regate, int Disparo) {
         super(nombre, edad, nacio, pieHabil, rating, equipo, Agarre, Lanzamiento, Fisico, Ritmo, Entrada, Vision, Passing, Regate, Disparo);
@@ -14,10 +14,6 @@ public class Portero extends Jugador{
     public Portero(String nombre, int edad, String nacio, String pieHabil, int rating) {
         super(nombre, edad, nacio, pieHabil, rating);
     }
-
-   
-    
-    
 
     public String getNombre() {
         return nombre;
@@ -72,7 +68,7 @@ public class Portero extends Jugador{
     }
 
     public void setAgarre(int Agarre) {
-        
+
         this.Agarre = Agarre;
     }
 
@@ -145,20 +141,19 @@ public class Portero extends Jugador{
         System.out.println(super.toString());
         return "Portero";
     }
-    
-    
- 
-    
-     public void rating(){
-        
-         
-         
-         
-         
-         
-        
+
+    public void rating() {
+
+        int opc = 0;
+        int s;
+
+        while (opc != 9) {
+
+            s = ram.nextInt(100);
+            opc++;
+
+        }
+
     }
-    
-    
-    
+
 }
