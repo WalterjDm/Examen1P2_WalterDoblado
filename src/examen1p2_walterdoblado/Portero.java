@@ -11,6 +11,14 @@ public class Portero extends Jugador{
         super(nombre, edad, nacio, pieHabil, rating, equipo, Agarre, Lanzamiento, Fisico, Ritmo, Entrada, Vision, Passing, Regate, Disparo);
     }
 
+    public Portero(String nombre, int edad, String nacio, String pieHabil, int rating) {
+        super(nombre, edad, nacio, pieHabil, rating);
+    }
+
+   
+    
+    
+
     public String getNombre() {
         return nombre;
     }

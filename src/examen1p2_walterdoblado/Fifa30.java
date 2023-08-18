@@ -140,6 +140,11 @@ public class Fifa30 extends javax.swing.JFrame {
                 jug_agregarMouseClicked(evt);
             }
         });
+        jug_agregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jug_agregarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -313,7 +318,61 @@ public class Fifa30 extends javax.swing.JFrame {
 
     private void jug_agregarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jug_agregarMouseClicked
        
-        JOptionPane.showMessageDialog(this, equipos);
+        if (!(equipos.isEmpty())) {
+            int pos = Integer.parseInt(JOptionPane.showInputDialog("ingrese el equipo del jugador" +equipos)) ;
+            
+            
+            int pos1 = Integer.parseInt(JOptionPane.showInputDialog("1. portero"
+                    + "\n2. mediocampista"
+                    + "\n3. defensa"
+                    + "\n4. delantero")) ;
+            
+            if (pos1==1) {
+                
+                int edad = Integer.parseInt(jug_edad.getText());
+                int rating1 = Integer.parseInt(jug_rating.getText());
+                
+                equipos.get(pos).getPlantilla().add(new Portero(jug_nombre1.getText(), edad, jug_nacio.getText(), jug_piehabil.getText(),rating1 ));
+                jug_nombre1.setText("");
+                jug_edad.setText("");
+                jug_nacio.setText("");
+                jug_piehabil.setText("");
+                jug_rating.setText("");
+                
+            } else if (pos1 == 2) {
+                int edad = Integer.parseInt(jug_edad.getText());
+                int rating1 = Integer.parseInt(jug_rating.getText());
+                equipos.get(pos).getPlantilla().add(new Mediocampista(jug_nombre1.getText(), edad, jug_nacio.getText(), jug_piehabil.getText(),rating1));
+                 jug_nombre1.setText("");
+                jug_edad.setText("");
+                jug_nacio.setText("");
+                jug_piehabil.setText("");
+                jug_rating.setText("");
+            }else if (pos1 == 3) {
+                  int edad = Integer.parseInt(jug_edad.getText());
+                int rating1 = Integer.parseInt(jug_rating.getText());
+                equipos.get(pos).getPlantilla().add(new Defensa(jug_nombre1.getText(), edad, jug_nacio.getText(), jug_piehabil.getText(),rating1));
+                 jug_nombre1.setText("");
+                jug_edad.setText("");
+                jug_nacio.setText("");
+                jug_piehabil.setText("");
+                jug_rating.setText("");
+            }else if () {
+                
+            }else{
+                
+            }
+          
+            
+            
+            
+        }else if (equipos.isEmpty()){
+            JOptionPane.showMessageDialog(this, "no hay equipos disponibles");
+        }
+        
+        
+        
+        
         
         
         
@@ -322,6 +381,10 @@ public class Fifa30 extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_jug_agregarMouseClicked
+
+    private void jug_agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jug_agregarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jug_agregarActionPerformed
 
  
     

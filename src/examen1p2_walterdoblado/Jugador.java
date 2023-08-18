@@ -38,6 +38,14 @@ public class Jugador {
         this.Disparo = Disparo;
     }
 
+    public Jugador(String nombre, int edad, String nacio, String pieHabil, int rating) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.nacio = nacio;
+        this.pieHabil = pieHabil;
+        this.rating = rating;
+    }
+
     public Jugador() {
         
     }

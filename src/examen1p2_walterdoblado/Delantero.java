@@ -7,6 +7,11 @@ public class Delantero extends Jugador{
     public Delantero(String nombre, int edad, String nacio, String pieHabil, int rating, String equipo, int Agarre, int Lanzamiento, int Fisico, int Ritmo, int Entrada, int Vision, int Passing, int Regate, int Disparo) {
         super(nombre, edad, nacio, pieHabil, rating, equipo, Agarre, Lanzamiento, Fisico, Ritmo, Entrada, Vision, Passing, Regate, Disparo);
     }
+    
+    
+    
+    
+    
 
     public String getNombre() {
         return nombre;
