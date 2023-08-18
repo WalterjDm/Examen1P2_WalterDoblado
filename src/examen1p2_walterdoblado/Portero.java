@@ -146,14 +146,36 @@ public class Portero extends Jugador {
 
         int opc = 0;
         int s;
-
+        ArrayList d = new ArrayList();
         while (opc != 9) {
 
-            s = ram.nextInt(100);
+            d.add(s = 1 + ram.nextInt(12));
             opc++;
 
         }
+        while (Agarre >= 70 && Agarre <= 100) {
 
+            int Agarre1 = (Integer) d.get(1);
+
+            Agarre = Agarre1 * 12;
+
+        }
+
+        this.Agarre = Agarre;
+        
+        
+        while (Lanzamiento >= 70 && Lanzamiento <= 100) {
+
+            int Lanzamiento1 = (Integer) d.get(1);
+
+            Lanzamiento = Lanzamiento1 * 12;
+
+        }
+        this.Lanzamiento = Lanzamiento;
+        
+        
     }
+    
+    
 
 }

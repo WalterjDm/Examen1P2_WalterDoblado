@@ -56,7 +56,11 @@ public class Equipo {
 
     @Override
     public String toString() {
-        return "Equipo{" + "nombreEqui=" + nombreEqui + ", pais=" + pais + ", ratingEqui=" + ratingEqui + ", plantilla=" + plantilla + '}';
+        return "Equipo"
+                + "\n" + "nombre :" + nombreEqui + ""
+                + "\n pais: " + pais + ""
+                + "\n rating:" + ratingEqui + ""
+                + "\n plantilla=" + plantilla ;
     }
     
     
