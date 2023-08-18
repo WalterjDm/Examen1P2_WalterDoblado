@@ -2,7 +2,7 @@
 package examen1p2_walterdoblado;
 
 
-public class Jugador {
+public abstract class Jugador {
     protected String nombre;
     protected int edad;
     protected String nacio;
@@ -176,10 +176,10 @@ public class Jugador {
         return "Jugador   " + "  nombre=  " + nombre + ", edad=" + edad + ", nacio=" + nacio + ", pieHabil=" + pieHabil + ", rating=" + rating + ", equipo=" + equipo + ", Agarre=" + Agarre + ", Lanzamiento=" + Lanzamiento + ", Fisico=" + Fisico + ", Ritmo=" + Ritmo + ", Entrada=" + Entrada + ", Vision=" + Vision + ", Passing=" + Passing + ", Regate=" + Regate + ", Disparo=" + Disparo + '}';
     }
     
-    public void rating(){
+    public abstract void rating();
         
         
-    }
+    
     
     
     

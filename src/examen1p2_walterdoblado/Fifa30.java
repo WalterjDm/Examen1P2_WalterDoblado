@@ -119,7 +119,7 @@ public class Fifa30 extends javax.swing.JFrame {
             .addGap(0, 458, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("tab4", jPanel6);
+        jTabbedPane1.addTab("Agregar Estadio", jPanel6);
 
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -390,7 +390,9 @@ public class Fifa30 extends javax.swing.JFrame {
             }else if (pos1 == 3) {
                   int edad = Integer.parseInt(jug_edad.getText());
                 int rating1 = Integer.parseInt(jug_rating.getText());
-                equipos.get(pos).getPlantilla().add(new Defensa(jug_nombre1.getText(), edad, jug_nacio.getText(), jug_piehabil.getText(),rating1));
+                Defensa dd = new Defensa(jug_nombre1.getText(), edad, jug_nacio.getText(), jug_piehabil.getText(),rating1);
+                dd.rating();
+                equipos.get(pos).getPlantilla().add(dd);
                  jug_nombre1.setText("");
                 jug_edad.setText("");
                 jug_nacio.setText("");
@@ -399,7 +401,9 @@ public class Fifa30 extends javax.swing.JFrame {
             }else if (pos1== 4) {
                      int edad = Integer.parseInt(jug_edad.getText());
                 int rating1 = Integer.parseInt(jug_rating.getText());
-                equipos.get(pos).getPlantilla().add(new Delantero(jug_nombre1.getText(), edad, jug_nacio.getText(), jug_piehabil.getText(),rating1));
+                Delantero d = new Delantero(jug_nombre1.getText(), edad, jug_nacio.getText(), jug_piehabil.getText(),rating1);
+                d.rating();
+                equipos.get(pos).getPlantilla().add(d);
                  jug_nombre1.setText("");
                 jug_edad.setText("");
                 jug_nacio.setText("");
