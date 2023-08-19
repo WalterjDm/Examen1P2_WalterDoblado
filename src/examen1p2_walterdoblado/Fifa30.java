@@ -424,16 +424,15 @@ public class Fifa30 extends javax.swing.JFrame {
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
-                .addGap(62, 62, 62)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(733, Short.MAX_VALUE))
+                .addGap(0, 795, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
-                .addGap(69, 69, 69)
+                .addGap(14, 14, 14)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(351, Short.MAX_VALUE))
+                .addContainerGap(406, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Simulacion", jPanel9);
@@ -637,7 +636,37 @@ public class Fifa30 extends javax.swing.JFrame {
     private void jButton2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jButton2StateChanged
         // TODO add your handling code here:
         
-        JOptionPane.showMessageDialog(this, "pija");
+        int equi1 = Integer.parseInt(JOptionPane.showInputDialog("seleccione un equipo" + equipos));
+          int equi2 = Integer.parseInt(JOptionPane.showInputDialog("seleccione un equipo" + equipos));
+        int tot;
+        
+          if (equi1>equi2) {
+            
+              tot = equi1 -equi2;
+              
+              
+              
+        }else if (equi1<equi2) {
+            
+            
+            tot = equi2 -equi1;
+            
+        }else if (equi1==equi2) {
+            JOptionPane.showMessageDialog(this, "es un empate");
+            
+        }
+
+            
+            
+            
+        
+          
+          
+          
+          
+        
+        
+        
         
     }//GEN-LAST:event_jButton2StateChanged
 

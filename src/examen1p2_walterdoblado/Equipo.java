@@ -49,7 +49,21 @@ public class Equipo {
 
     public void setPlantilla(ArrayList<Jugador> plantilla) {
          if(plantilla.size() <=4){
+             int cont = 0;
         this.plantilla = plantilla;
+             if (plantilla.size()==3) {
+                
+                 for (int i = 0; i < plantilla.size(); i++) {
+                     
+                     
+                     
+                     ratingEqui += plantilla.get(i).getRating();
+                     
+                 }
+                
+                 this.setRatingEqui(ratingEqui);
+                 
+             }
         }
      
     }
