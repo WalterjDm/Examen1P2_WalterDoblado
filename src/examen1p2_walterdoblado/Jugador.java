@@ -173,7 +173,13 @@ public abstract class Jugador {
 
     @Override
     public String toString() {
-        return "Jugador   " + "  nombre=  " + nombre + ", edad=" + edad + ", nacio=" + nacio + ", pieHabil=" + pieHabil + ", rating=" + rating + ", equipo=" + equipo + ", Agarre=" + Agarre + ", Lanzamiento=" + Lanzamiento + ", Fisico=" + Fisico + ", Ritmo=" + Ritmo + ", Entrada=" + Entrada + ", Vision=" + Vision + ", Passing=" + Passing + ", Regate=" + Regate + ", Disparo=" + Disparo + '}';
+        return "Jugador   " + ""
+                + "\n  nombre:  " + nombre + ""
+                + "\n edad: " + edad + ""
+                + "\n nacionalidad: " + nacio + ""
+                + "\n pie habid: " + pieHabil + ""
+                + "\n rating de jugador: " + rating + ""
+                + "\n equipo=" + equipo ;
     }
     
     public abstract void rating();
