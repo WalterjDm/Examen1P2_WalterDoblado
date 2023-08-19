@@ -508,14 +508,14 @@ public class Fifa30 extends javax.swing.JFrame {
 
             int cap = Integer.parseInt(esta_capacidad.getText());
 
-            Estadio es = new Estadio(esta_nombre.getText(), esta_pais.getText(),cap);
+            Estadio es = new Estadio(esta_nombre.getText(), esta_pais.getText(), cap);
             int pos = Integer.parseInt(JOptionPane.showInputDialog("ingrese el equipo del jugador" + equipos));
             es.setEquipo(equipos.get(pos));
             esta_nombre.setText("");
             esta_pais.setText("");
             esta_capacidad.setText("");
 
-        }else if (equipos.isEmpty()) {
+        } else if (equipos.isEmpty()) {
             JOptionPane.showMessageDialog(this, "no hay equipos disponibles");
         }
 
@@ -530,7 +530,7 @@ public class Fifa30 extends javax.swing.JFrame {
         try {
 
             equipos.add(
-                new Equipo(equi_nombre.getText(), equi_pais.getText(), 0)
+                    new Equipo(equi_nombre.getText(), equi_pais.getText(), 0)
             );
             equi_nombre.setText("");
             equi_pais.setText("");
@@ -561,68 +561,68 @@ public class Fifa30 extends javax.swing.JFrame {
             int pos = Integer.parseInt(JOptionPane.showInputDialog("ingrese el equipo del jugador" + equipos));
 
             int pos1 = Integer.parseInt(JOptionPane.showInputDialog("1. portero"
-                + "\n2. mediocampista"
-                + "\n3. defensa"
-                + "\n4. delantero"));
-        if (equipos.get(pos).getPlantilla().size() > 4) {
+                    + "\n2. mediocampista"
+                    + "\n3. defensa"
+                    + "\n4. delantero"));
+            if (equipos.get(pos).getPlantilla().size() > 4) {
 
-            JOptionPane.showMessageDialog(this, "en esta plantilla ya alcanzo el maximo de jugadores");
-        } else if (pos1 == 1) {
+                JOptionPane.showMessageDialog(this, "en esta plantilla ya alcanzo el maximo de jugadores");
+            } else if (pos1 == 1) {
 
-            int edad = Integer.parseInt(jug_edad.getText());
-            int rating1 = Integer.parseInt(jug_rating.getText());
-            Portero p = new Portero(jug_nombre1.getText(), edad, jug_nacio.getText(), jug_piehabil.getText(), rating1);
+                int edad = Integer.parseInt(jug_edad.getText());
+                int rating1 = Integer.parseInt(jug_rating.getText());
+                Portero p = new Portero(jug_nombre1.getText(), edad, jug_nacio.getText(), jug_piehabil.getText(), rating1);
 
-            p.setEquipo(equipos.get(pos));
-            p.rating();
-            equipos.get(pos).getPlantilla().add(p);
+                p.setEquipo(equipos.get(pos));
+                p.rating();
+                equipos.get(pos).getPlantilla().add(p);
 
-            jug_nombre1.setText("");
-            jug_edad.setText("");
-            jug_nacio.setText("");
-            jug_piehabil.setText("");
-            jug_rating.setText("");
+                jug_nombre1.setText("");
+                jug_edad.setText("");
+                jug_nacio.setText("");
+                jug_piehabil.setText("");
+                jug_rating.setText("");
 
-        } else if (pos1 == 2) {
-            int edad = Integer.parseInt(jug_edad.getText());
-            int rating1 = Integer.parseInt(jug_rating.getText());
-            Mediocampista m = new Mediocampista(jug_nombre1.getText(), edad, jug_nacio.getText(), jug_piehabil.getText(), rating1);
-            m.setEquipo(equipos.get(pos));
-            m.rating();
-            equipos.get(pos).getPlantilla().add(m);
-            jug_nombre1.setText("");
-            jug_edad.setText("");
-            jug_nacio.setText("");
-            jug_piehabil.setText("");
-            jug_rating.setText("");
-        } else if (pos1 == 3) {
-            int edad = Integer.parseInt(jug_edad.getText());
-            int rating1 = Integer.parseInt(jug_rating.getText());
-            Defensa dd = new Defensa(jug_nombre1.getText(), edad, jug_nacio.getText(), jug_piehabil.getText(), rating1);
-            dd.setEquipo(equipos.get(pos));
-            dd.rating();
-            equipos.get(pos).getPlantilla().add(dd);
-            jug_nombre1.setText("");
-            jug_edad.setText("");
-            jug_nacio.setText("");
-            jug_piehabil.setText("");
-            jug_rating.setText("");
-        } else if (pos1 == 4) {
-            int edad = Integer.parseInt(jug_edad.getText());
-            int rating1 = Integer.parseInt(jug_rating.getText());
-            Delantero d = new Delantero(jug_nombre1.getText(), edad, jug_nacio.getText(), jug_piehabil.getText(), rating1);
-            d.setEquipo(equipos.get(pos));
-            d.rating();
-            equipos.get(pos).getPlantilla().add(d);
-            jug_nombre1.setText("");
-            jug_edad.setText("");
-            jug_nacio.setText("");
-            jug_piehabil.setText("");
-            jug_rating.setText("");
-        } else {
-            JOptionPane.showMessageDialog(this, "fuera de rango");
+            } else if (pos1 == 2) {
+                int edad = Integer.parseInt(jug_edad.getText());
+                int rating1 = Integer.parseInt(jug_rating.getText());
+                Mediocampista m = new Mediocampista(jug_nombre1.getText(), edad, jug_nacio.getText(), jug_piehabil.getText(), rating1);
+                m.setEquipo(equipos.get(pos));
+                m.rating();
+                equipos.get(pos).getPlantilla().add(m);
+                jug_nombre1.setText("");
+                jug_edad.setText("");
+                jug_nacio.setText("");
+                jug_piehabil.setText("");
+                jug_rating.setText("");
+            } else if (pos1 == 3) {
+                int edad = Integer.parseInt(jug_edad.getText());
+                int rating1 = Integer.parseInt(jug_rating.getText());
+                Defensa dd = new Defensa(jug_nombre1.getText(), edad, jug_nacio.getText(), jug_piehabil.getText(), rating1);
+                dd.setEquipo(equipos.get(pos));
+                dd.rating();
+                equipos.get(pos).getPlantilla().add(dd);
+                jug_nombre1.setText("");
+                jug_edad.setText("");
+                jug_nacio.setText("");
+                jug_piehabil.setText("");
+                jug_rating.setText("");
+            } else if (pos1 == 4) {
+                int edad = Integer.parseInt(jug_edad.getText());
+                int rating1 = Integer.parseInt(jug_rating.getText());
+                Delantero d = new Delantero(jug_nombre1.getText(), edad, jug_nacio.getText(), jug_piehabil.getText(), rating1);
+                d.setEquipo(equipos.get(pos));
+                d.rating();
+                equipos.get(pos).getPlantilla().add(d);
+                jug_nombre1.setText("");
+                jug_edad.setText("");
+                jug_nacio.setText("");
+                jug_piehabil.setText("");
+                jug_rating.setText("");
+            } else {
+                JOptionPane.showMessageDialog(this, "fuera de rango");
 
-        }
+            }
 
         } else if (equipos.isEmpty()) {
             JOptionPane.showMessageDialog(this, "no hay equipos disponibles");
@@ -638,109 +638,94 @@ public class Fifa30 extends javax.swing.JFrame {
         // TODO add your handling code here:
         Random r = new Random();
         int t = 0;
-           int tt = 0;
+        int tt = 0;
         int equi1 = Integer.parseInt(JOptionPane.showInputDialog("seleccione un equipo" + equipos));
-          int equi2 = Integer.parseInt(JOptionPane.showInputDialog("seleccione un equipo" + equipos));
+        int equi2 = Integer.parseInt(JOptionPane.showInputDialog("seleccione un equipo" + equipos));
         int tot = 0;
-        
-          if (equi1>equi2) {
-            
-              tot = equi1 -equi2;
-              
-        JOptionPane.showMessageDialog(this, "equipo con mayor rating "+equi1);
-                JOptionPane.showMessageDialog(this, "equipo con menor rating "+equi2);
-        }else if (equi1<equi2) {
-            
-            
-            tot = equi2 -equi1;
-                       
-        JOptionPane.showMessageDialog(this, "equipo con mayor rating "+equi2);
-                JOptionPane.showMessageDialog(this, "equipo con menor rating "+equi1);
-            
-        }else if (equi1==equi2) {
+
+        if (equi1 > equi2) {
+
+            tot = equi1 - equi2;
+
+            JOptionPane.showMessageDialog(this, "equipo con mayor rating " + equi1);
+            JOptionPane.showMessageDialog(this, "equipo con menor rating " + equi2);
+        } else if (equi1 < equi2) {
+
+            tot = equi2 - equi1;
+
+            JOptionPane.showMessageDialog(this, "equipo con mayor rating " + equi2);
+            JOptionPane.showMessageDialog(this, "equipo con menor rating " + equi1);
+
+        } else if (equi1 == equi2) {
             JOptionPane.showMessageDialog(this, "es un empate");
-            
+
         }
 
-          
-          if (tot<=10) {
-            
-            tot = tot*4;  
-             JOptionPane.showMessageDialog(this, "la probabilidades: " +tot);
-                 t = r.nextInt(5);
-                 tt = r.nextInt(100);
-        }else  if (tot>10) {
-            
-            tot = tot*5;  
-            JOptionPane.showMessageDialog(this, "la probabilidades: " +tot);
-        }
-            
-          
-          
-          if (tot<=10) {
-            
-        
-             JOptionPane.showMessageDialog(this, "los goles fueron: " +t);
-             int contmay = 0;
-             int contmen = 0;
-             int cont1 = 0;
-             while (cont1 == t) {            
-                        if (tt>=0 && tt<=tot) {
-                
-                JOptionPane.showMessageDialog(this, "gol para el menor rating");
-                cont1++;
-                contmen++;
-                JOptionPane.showMessageDialog(this, "goles del equipo menor: "+contmen);
-            
-        }else if ( tt>tot) {
-                
-                JOptionPane.showMessageDialog(this, "gol para el mayor rating");
-             cont1++;
-                 contmay++;
-                JOptionPane.showMessageDialog(this, "goles del equipo mayor: "+contmay);
-        }
-                        
-        }
-          }else  if (tot>10) {
-                 JOptionPane.showMessageDialog(this, "los goles fueron: " +t);
-             int contmay = 0;
-             int contmen = 0;
-             int cont1 = 0;
-             while (cont1 == t) {            
-                        if (tt>=0 && tt<=tot) {
-                
-                JOptionPane.showMessageDialog(this, "gol para el menor rating");
-                cont1++;
-                contmen++;
-                JOptionPane.showMessageDialog(this, "goles del equipo menor: "+contmen);
-            
-        }else if ( tt>tot) {
-                
-                JOptionPane.showMessageDialog(this, "gol para el mayor rating");
-             cont1++;
-                 contmay++;
-                JOptionPane.showMessageDialog(this, "goles del equipo mayor: "+contmay);
-        }
-          
-        }   
+        if (tot <= 10) {
 
-             
-            
-             
-        
-          
-          
-          
-          
-        
-        
-        
-        
+            tot = tot * 4;
+            JOptionPane.showMessageDialog(this, "la probabilidades: " + tot);
+            t = r.nextInt(5);
+            tt = r.nextInt(100);
+        } else if (tot > 10) {
+
+            tot = tot * 5;
+            JOptionPane.showMessageDialog(this, "la probabilidades: " + tot);
+            t = r.nextInt(10);
+        }
+
+        if (tot <= 10) {
+
+            JOptionPane.showMessageDialog(this, "los goles fueron: " + t);
+            int contmay = 0;
+            int contmen = 0;
+            int cont1 = 0;
+            while (cont1 == t) {
+                if (tt >= 0 && tt <= tot) {
+
+                    JOptionPane.showMessageDialog(this, "gol para el menor rating");
+                    cont1++;
+                    contmen++;
+                    JOptionPane.showMessageDialog(this, "goles del equipo menor: " + contmen);
+
+                } else if (tt > tot) {
+
+                    JOptionPane.showMessageDialog(this, "gol para el mayor rating");
+                    cont1++;
+                    contmay++;
+                    JOptionPane.showMessageDialog(this, "goles del equipo mayor: " + contmay);
+                }
+
+            }
+        } else if (tot > 10) {
+            JOptionPane.showMessageDialog(this, "los goles fueron: " + t);
+            int contmay = 0;
+            int contmen = 0;
+            int cont1 = 0;
+            while (cont1 == t) {
+                if (tt >= 0 && tt <= tot) {
+
+                    JOptionPane.showMessageDialog(this, "gol para el menor rating");
+                    cont1++;
+                    contmen++;
+                    JOptionPane.showMessageDialog(this, "goles del equipo menor: " + contmen);
+
+                } else if (tt > tot) {
+
+                    JOptionPane.showMessageDialog(this, "gol para el mayor rating");
+                    cont1++;
+                    contmay++;
+                    JOptionPane.showMessageDialog(this, "goles del equipo mayor: " + contmay);
+                }
+
+            }
+
+        }
     }//GEN-LAST:event_jButton2StateChanged
 
     /**
-     * @param args the command line arguments
-     */
+         * @param args the command line arguments
+         */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
