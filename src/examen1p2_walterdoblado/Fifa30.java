@@ -66,6 +66,7 @@ public class Fifa30 extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jPanel11 = new javax.swing.JPanel();
+        jButton5 = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -459,15 +460,28 @@ public class Fifa30 extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Simulacion", jPanel9);
 
+        jButton5.setText("jButton5");
+        jButton5.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jButton5StateChanged(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
         jPanel11Layout.setHorizontalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 953, Short.MAX_VALUE)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGap(192, 192, 192)
+                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(478, Short.MAX_VALUE))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 471, Short.MAX_VALUE)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGap(166, 166, 166)
+                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(154, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Eliminar jugadores", jPanel11);
@@ -802,6 +816,40 @@ public class Fifa30 extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton4StateChanged
 
+    private void jButton5StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jButton5StateChanged
+        // TODO add your handling code here:
+        
+          if (!(equipos.isEmpty())) {
+         int equi = Integer.parseInt(JOptionPane.showInputDialog("seleccione un equipo" + equipos));
+        int equi1 = Integer.parseInt(JOptionPane.showInputDialog("seleccione un jugador" + equipos.get(equi).getPlantilla()));
+        
+        
+        
+     
+        int ele = Integer.parseInt(JOptionPane.showInputDialog("seguro que quiere eliminar  si/no [1/2]" ));
+            if (ele == 1) {
+                equipos.get(equi).getPlantilla().remove(equi1);
+                JOptionPane.showMessageDialog(this, "eliminado con exito");
+            }else if (ele == 2) {
+               
+                JOptionPane.showMessageDialog(this, "understandable");
+            }
+            
+        
+        
+        
+        
+        
+        }else if (equipos.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "no hay equipos disponibles");
+        }
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_jButton5StateChanged
+
     /**
          * @param args the command line arguments
          */
@@ -850,6 +898,7 @@ ArrayList<Estadio> estadio = new ArrayList();
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
