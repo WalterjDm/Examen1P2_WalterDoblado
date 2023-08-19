@@ -36,7 +36,6 @@ public class Fifa30 extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jug_nombre1 = new javax.swing.JTextField();
         jug_edad = new javax.swing.JTextField();
@@ -57,6 +56,14 @@ public class Fifa30 extends javax.swing.JFrame {
         esta_nombre = new javax.swing.JTextField();
         esta_capacidad = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
+        equi_nombre1 = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        equi_pais1 = new javax.swing.JTextField();
+        jPanel9 = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
+        jPanel10 = new javax.swing.JPanel();
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -74,7 +81,15 @@ public class Fifa30 extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jTabbedPane1.setBackground(new java.awt.Color(0, 0, 0));
+        jTabbedPane1.setForeground(new java.awt.Color(255, 255, 255));
+        jTabbedPane1.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jTabbedPane1StateChanged(evt);
+            }
+        });
+
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/examen1p2_walterdoblado/imagen/fifa20-grid-tile-volta-16x9.png.adapt.crop191x100.628p.png"))); // NOI18N
         jLabel5.setText("jLabel5");
@@ -85,14 +100,14 @@ public class Fifa30 extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 652, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 134, Short.MAX_VALUE))
+                .addGap(0, 301, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel5)
-                .addContainerGap(111, Short.MAX_VALUE))
+                .addContainerGap(124, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("INICIO", jPanel2);
@@ -101,27 +116,14 @@ public class Fifa30 extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 786, Short.MAX_VALUE)
+            .addGap(0, 953, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 458, Short.MAX_VALUE)
+            .addGap(0, 471, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("tab2", jPanel4);
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 786, Short.MAX_VALUE)
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 458, Short.MAX_VALUE)
-        );
-
-        jTabbedPane1.addTab("Eliminar Equipo", jPanel5);
+        jTabbedPane1.addTab("Modificar Equipo", jPanel4);
 
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -169,7 +171,7 @@ public class Fifa30 extends javax.swing.JFrame {
                     .addComponent(jug_edad, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jug_nombre1, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jug_piehabil))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 147, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 314, Short.MAX_VALUE)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -198,7 +200,7 @@ public class Fifa30 extends javax.swing.JFrame {
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jug_rating, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jug_agregar, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Agregar jugador", jPanel7);
@@ -256,7 +258,7 @@ public class Fifa30 extends javax.swing.JFrame {
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(equi_pais, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 181, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 348, Short.MAX_VALUE)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
@@ -281,7 +283,7 @@ public class Fifa30 extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(62, 62, 62)
                 .addComponent(equi_agregar, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(103, Short.MAX_VALUE))
+                .addContainerGap(116, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Agregar equipo", jPanel8);
@@ -327,7 +329,7 @@ public class Fifa30 extends javax.swing.JFrame {
                     .addComponent(esta_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(esta_pais, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(esta_capacidad, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(554, Short.MAX_VALUE))
+                .addContainerGap(721, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -338,12 +340,118 @@ public class Fifa30 extends javax.swing.JFrame {
                 .addComponent(esta_pais, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
                 .addComponent(esta_capacidad, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 120, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18))
         );
 
         jTabbedPane1.addTab("Agregar Estadio", jPanel6);
+
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel5.setForeground(new java.awt.Color(255, 255, 255));
+
+        equi_nombre1.setBackground(new java.awt.Color(0, 0, 0));
+        equi_nombre1.setForeground(new java.awt.Color(204, 255, 255));
+        equi_nombre1.setText("Nombre");
+        equi_nombre1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                equi_nombre1ActionPerformed(evt);
+            }
+        });
+
+        jLabel10.setForeground(new java.awt.Color(0, 51, 51));
+        jLabel10.setText("Nombre del equipo--->");
+
+        jLabel11.setForeground(new java.awt.Color(0, 51, 51));
+        jLabel11.setText("Pais del equipo --->");
+
+        equi_pais1.setBackground(new java.awt.Color(0, 0, 0));
+        equi_pais1.setForeground(new java.awt.Color(204, 255, 255));
+        equi_pais1.setText("Pais");
+        equi_pais1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                equi_pais1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(300, 300, 300)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(jLabel10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(equi_nombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(equi_pais1, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(300, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(181, 181, 181)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(equi_nombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(equi_pais1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(181, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Eliminar Equipo", jPanel5);
+
+        jPanel9.setBackground(new java.awt.Color(255, 255, 255));
+
+        jButton2.setText("Equipos");
+        jButton2.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jButton2StateChanged(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(62, 62, 62)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(733, Short.MAX_VALUE))
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(69, 69, 69)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(351, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Simulacion", jPanel9);
+
+        jPanel10.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 953, Short.MAX_VALUE)
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 471, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("tab8", jPanel10);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -375,24 +483,54 @@ public class Fifa30 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void equi_nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equi_nombreActionPerformed
+    private void jTabbedPane1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane1StateChanged
         // TODO add your handling code here:
-    }//GEN-LAST:event_equi_nombreActionPerformed
 
-    private void equi_paisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equi_paisActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_equi_paisActionPerformed
+    }//GEN-LAST:event_jTabbedPane1StateChanged
 
-    private void jug_nombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jug_nombre1ActionPerformed
+    private void equi_pais1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equi_pais1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jug_nombre1ActionPerformed
+    }//GEN-LAST:event_equi_pais1ActionPerformed
+
+    private void equi_nombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equi_nombre1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_equi_nombre1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+
+        if (!(equipos.isEmpty())) {
+
+            int cap = Integer.parseInt(esta_capacidad.getText());
+
+            Estadio es = new Estadio(esta_nombre.getText(), esta_pais.getText(),cap);
+            int pos = Integer.parseInt(JOptionPane.showInputDialog("ingrese el equipo del jugador" + equipos));
+            es.setEquipo(equipos.get(pos));
+            esta_nombre.setText("");
+            esta_pais.setText("");
+            esta_capacidad.setText("");
+
+        }else if (equipos.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "no hay equipos disponibles");
+        }
+
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void esta_capacidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_esta_capacidadActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_esta_capacidadActionPerformed
 
     private void equi_agregarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_equi_agregarMouseClicked
 
         try {
 
             equipos.add(
-                    new Equipo(equi_nombre.getText(), equi_pais.getText(), 0)
+                new Equipo(equi_nombre.getText(), equi_pais.getText(), 0)
             );
             equi_nombre.setText("");
             equi_pais.setText("");
@@ -403,8 +541,19 @@ public class Fifa30 extends javax.swing.JFrame {
             ex.printStackTrace();
         }
 
-
     }//GEN-LAST:event_equi_agregarMouseClicked
+
+    private void equi_paisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equi_paisActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_equi_paisActionPerformed
+
+    private void equi_nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equi_nombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_equi_nombreActionPerformed
+
+    private void jug_agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jug_agregarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jug_agregarActionPerformed
 
     private void jug_agregarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jug_agregarMouseClicked
 
@@ -412,113 +561,85 @@ public class Fifa30 extends javax.swing.JFrame {
             int pos = Integer.parseInt(JOptionPane.showInputDialog("ingrese el equipo del jugador" + equipos));
 
             int pos1 = Integer.parseInt(JOptionPane.showInputDialog("1. portero"
-                    + "\n2. mediocampista"
-                    + "\n3. defensa"
-                    + "\n4. delantero"));
-            if (equipos.get(pos).getPlantilla().size() > 4) {
+                + "\n2. mediocampista"
+                + "\n3. defensa"
+                + "\n4. delantero"));
+        if (equipos.get(pos).getPlantilla().size() > 4) {
 
-                JOptionPane.showMessageDialog(this, "en esta plantilla ya alcanzo el maximo de jugadores");
-            } else if (pos1 == 1) {
+            JOptionPane.showMessageDialog(this, "en esta plantilla ya alcanzo el maximo de jugadores");
+        } else if (pos1 == 1) {
 
-                int edad = Integer.parseInt(jug_edad.getText());
-                int rating1 = Integer.parseInt(jug_rating.getText());
-                Portero p = new Portero(jug_nombre1.getText(), edad, jug_nacio.getText(), jug_piehabil.getText(), rating1);
+            int edad = Integer.parseInt(jug_edad.getText());
+            int rating1 = Integer.parseInt(jug_rating.getText());
+            Portero p = new Portero(jug_nombre1.getText(), edad, jug_nacio.getText(), jug_piehabil.getText(), rating1);
 
-                p.setEquipo(equipos.get(pos));
-                p.rating();
-                equipos.get(pos).getPlantilla().add(p);
+            p.setEquipo(equipos.get(pos));
+            p.rating();
+            equipos.get(pos).getPlantilla().add(p);
 
-                jug_nombre1.setText("");
-                jug_edad.setText("");
-                jug_nacio.setText("");
-                jug_piehabil.setText("");
-                jug_rating.setText("");
+            jug_nombre1.setText("");
+            jug_edad.setText("");
+            jug_nacio.setText("");
+            jug_piehabil.setText("");
+            jug_rating.setText("");
 
-            } else if (pos1 == 2) {
-                int edad = Integer.parseInt(jug_edad.getText());
-                int rating1 = Integer.parseInt(jug_rating.getText());
-                Mediocampista m = new Mediocampista(jug_nombre1.getText(), edad, jug_nacio.getText(), jug_piehabil.getText(), rating1);
-                m.setEquipo(equipos.get(pos));
-                m.rating();
-                equipos.get(pos).getPlantilla().add(m);
-                jug_nombre1.setText("");
-                jug_edad.setText("");
-                jug_nacio.setText("");
-                jug_piehabil.setText("");
-                jug_rating.setText("");
-            } else if (pos1 == 3) {
-                int edad = Integer.parseInt(jug_edad.getText());
-                int rating1 = Integer.parseInt(jug_rating.getText());
-                Defensa dd = new Defensa(jug_nombre1.getText(), edad, jug_nacio.getText(), jug_piehabil.getText(), rating1);
-                dd.setEquipo(equipos.get(pos));
-                dd.rating();
-                equipos.get(pos).getPlantilla().add(dd);
-                jug_nombre1.setText("");
-                jug_edad.setText("");
-                jug_nacio.setText("");
-                jug_piehabil.setText("");
-                jug_rating.setText("");
-            } else if (pos1 == 4) {
-                int edad = Integer.parseInt(jug_edad.getText());
-                int rating1 = Integer.parseInt(jug_rating.getText());
-                Delantero d = new Delantero(jug_nombre1.getText(), edad, jug_nacio.getText(), jug_piehabil.getText(), rating1);
-                d.setEquipo(equipos.get(pos));
-                d.rating();
-                equipos.get(pos).getPlantilla().add(d);
-                jug_nombre1.setText("");
-                jug_edad.setText("");
-                jug_nacio.setText("");
-                jug_piehabil.setText("");
-                jug_rating.setText("");
-            } else {
-                JOptionPane.showMessageDialog(this, "fuera de rango");
+        } else if (pos1 == 2) {
+            int edad = Integer.parseInt(jug_edad.getText());
+            int rating1 = Integer.parseInt(jug_rating.getText());
+            Mediocampista m = new Mediocampista(jug_nombre1.getText(), edad, jug_nacio.getText(), jug_piehabil.getText(), rating1);
+            m.setEquipo(equipos.get(pos));
+            m.rating();
+            equipos.get(pos).getPlantilla().add(m);
+            jug_nombre1.setText("");
+            jug_edad.setText("");
+            jug_nacio.setText("");
+            jug_piehabil.setText("");
+            jug_rating.setText("");
+        } else if (pos1 == 3) {
+            int edad = Integer.parseInt(jug_edad.getText());
+            int rating1 = Integer.parseInt(jug_rating.getText());
+            Defensa dd = new Defensa(jug_nombre1.getText(), edad, jug_nacio.getText(), jug_piehabil.getText(), rating1);
+            dd.setEquipo(equipos.get(pos));
+            dd.rating();
+            equipos.get(pos).getPlantilla().add(dd);
+            jug_nombre1.setText("");
+            jug_edad.setText("");
+            jug_nacio.setText("");
+            jug_piehabil.setText("");
+            jug_rating.setText("");
+        } else if (pos1 == 4) {
+            int edad = Integer.parseInt(jug_edad.getText());
+            int rating1 = Integer.parseInt(jug_rating.getText());
+            Delantero d = new Delantero(jug_nombre1.getText(), edad, jug_nacio.getText(), jug_piehabil.getText(), rating1);
+            d.setEquipo(equipos.get(pos));
+            d.rating();
+            equipos.get(pos).getPlantilla().add(d);
+            jug_nombre1.setText("");
+            jug_edad.setText("");
+            jug_nacio.setText("");
+            jug_piehabil.setText("");
+            jug_rating.setText("");
+        } else {
+            JOptionPane.showMessageDialog(this, "fuera de rango");
 
-            }
+        }
 
         } else if (equipos.isEmpty()) {
             JOptionPane.showMessageDialog(this, "no hay equipos disponibles");
         }
 
-
     }//GEN-LAST:event_jug_agregarMouseClicked
 
-    private void jug_agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jug_agregarActionPerformed
+    private void jug_nombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jug_nombre1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jug_agregarActionPerformed
+    }//GEN-LAST:event_jug_nombre1ActionPerformed
 
-    private void esta_capacidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_esta_capacidadActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_esta_capacidadActionPerformed
-
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void jButton2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jButton2StateChanged
         // TODO add your handling code here:
         
+        JOptionPane.showMessageDialog(this, "pija");
         
-          if (!(equipos.isEmpty())) {
-        
-        int cap = Integer.parseInt(esta_capacidad.getText());
-        
-        Estadio es = new Estadio(esta_nombre.getText(), esta_pais.getText(),cap);
-        int pos = Integer.parseInt(JOptionPane.showInputDialog("ingrese el equipo del jugador" + equipos));
-        es.setEquipo(equipos.get(pos));
-        esta_nombre.setText("");
-        esta_pais.setText("");
-        esta_capacidad.setText("");
-        
-        
-          }else if (equipos.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "no hay equipos disponibles");
-        }
-        
-        
-
-    }//GEN-LAST:event_jButton1MouseClicked
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-
-
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButton2StateChanged
 
     /**
      * @param args the command line arguments
@@ -560,17 +681,23 @@ public class Fifa30 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton equi_agregar;
     private javax.swing.JTextField equi_nombre;
+    private javax.swing.JTextField equi_nombre1;
     private javax.swing.JTextField equi_pais;
+    private javax.swing.JTextField equi_pais1;
     private javax.swing.JTextField esta_capacidad;
     private javax.swing.JTextField esta_nombre;
     private javax.swing.JTextField esta_pais;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -578,6 +705,7 @@ public class Fifa30 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JButton jug_agregar;
     private javax.swing.JTextField jug_edad;
