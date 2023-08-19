@@ -5,6 +5,7 @@
 package examen1p2_walterdoblado;
 
 import java.util.ArrayList;
+import java.util.Random;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -635,30 +636,97 @@ public class Fifa30 extends javax.swing.JFrame {
 
     private void jButton2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jButton2StateChanged
         // TODO add your handling code here:
-        
+        Random r = new Random();
+        int t = 0;
+           int tt = 0;
         int equi1 = Integer.parseInt(JOptionPane.showInputDialog("seleccione un equipo" + equipos));
           int equi2 = Integer.parseInt(JOptionPane.showInputDialog("seleccione un equipo" + equipos));
-        int tot;
+        int tot = 0;
         
           if (equi1>equi2) {
             
               tot = equi1 -equi2;
               
-              
-              
+        JOptionPane.showMessageDialog(this, "equipo con mayor rating "+equi1);
+                JOptionPane.showMessageDialog(this, "equipo con menor rating "+equi2);
         }else if (equi1<equi2) {
             
             
             tot = equi2 -equi1;
+                       
+        JOptionPane.showMessageDialog(this, "equipo con mayor rating "+equi2);
+                JOptionPane.showMessageDialog(this, "equipo con menor rating "+equi1);
             
         }else if (equi1==equi2) {
             JOptionPane.showMessageDialog(this, "es un empate");
             
         }
 
+          
+          if (tot<=10) {
             
+            tot = tot*4;  
+             JOptionPane.showMessageDialog(this, "la probabilidades: " +tot);
+                 t = r.nextInt(5);
+                 tt = r.nextInt(100);
+        }else  if (tot>10) {
             
+            tot = tot*5;  
+            JOptionPane.showMessageDialog(this, "la probabilidades: " +tot);
+        }
             
+          
+          
+          if (tot<=10) {
+            
+        
+             JOptionPane.showMessageDialog(this, "los goles fueron: " +t);
+             int contmay = 0;
+             int contmen = 0;
+             int cont1 = 0;
+             while (cont1 == t) {            
+                        if (tt>=0 && tt<=tot) {
+                
+                JOptionPane.showMessageDialog(this, "gol para el menor rating");
+                cont1++;
+                contmen++;
+                JOptionPane.showMessageDialog(this, "goles del equipo menor: "+contmen);
+            
+        }else if ( tt>tot) {
+                
+                JOptionPane.showMessageDialog(this, "gol para el mayor rating");
+             cont1++;
+                 contmay++;
+                JOptionPane.showMessageDialog(this, "goles del equipo mayor: "+contmay);
+        }
+                        
+        }
+          }else  if (tot>10) {
+                 JOptionPane.showMessageDialog(this, "los goles fueron: " +t);
+             int contmay = 0;
+             int contmen = 0;
+             int cont1 = 0;
+             while (cont1 == t) {            
+                        if (tt>=0 && tt<=tot) {
+                
+                JOptionPane.showMessageDialog(this, "gol para el menor rating");
+                cont1++;
+                contmen++;
+                JOptionPane.showMessageDialog(this, "goles del equipo menor: "+contmen);
+            
+        }else if ( tt>tot) {
+                
+                JOptionPane.showMessageDialog(this, "gol para el mayor rating");
+             cont1++;
+                 contmay++;
+                JOptionPane.showMessageDialog(this, "goles del equipo mayor: "+contmay);
+        }
+          
+        }   
+
+             
+            
+             
         
           
           
